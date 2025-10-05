@@ -1,0 +1,10 @@
+/* Import CKEditor’s default CSS first */
+@import 'ckeditor5/ckeditor5.css';
+
+/* Now add your dark mode overrides */
+.dark {
+  --ck-color-base-background: oklch(0.21 0.006 285.885);
+  --ck-color-base-border: oklch(1 0 0 / 10%);
+  --ck-color-base-text: hsl(0, 0%, 96%);
+  --ck-color-button-default-hover-background: oklch(0.541 0.281 293.009);
+}
