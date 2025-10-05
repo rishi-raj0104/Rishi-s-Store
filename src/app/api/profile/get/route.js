@@ -13,7 +13,7 @@ export async function GET() {
 
     const userId = auth.userId;
 
-    const user = await UserModel.findById(userId).lean();
+   const user = await UserModel.findById(userId, "name email avatar phone").lean();
     if (!user) {
       return response(false, 404, "User not found.");
     }
