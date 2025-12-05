@@ -28,10 +28,12 @@ const UserPanelNavigation = () => {
 
       dispatch(logout());
       showToast("success", logoutResponse.message);
-      console.log('WEBSITE_LOGIN',WEBSITE_LOGIN);
-      await router.push(WEBSITE_LOGIN);
-      console.log('##########');
-
+      router.push(WEBSITE_LOGIN);
+      if (window.location.pathname !== WEBSITE_LOGIN) {
+        console.log("Fallback: forcing full navigation to", WEBSITE_LOGIN);
+        window.location.href = WEBSITE_LOGIN;
+        return;
+      }
     } catch (error) {
       showToast("error", error.message);
     }
