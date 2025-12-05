@@ -29,7 +29,7 @@ const UserPanelNavigation = () => {
       dispatch(logout());
       showToast("success", logoutResponse.message);
       console.log('WEBSITE_LOGIN',WEBSITE_LOGIN);
-      router.push(WEBSITE_LOGIN);
+      await router.push(WEBSITE_LOGIN);
       console.log('##########');
 
     } catch (error) {
