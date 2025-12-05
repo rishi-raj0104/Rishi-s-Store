@@ -3,9 +3,8 @@ import { jwtVerify } from "jose";
 
 export async function getLoggedInUser() {
   try {
-    const cookieStore = cookies();
+    const cookieStore = await cookies();
     const token = cookieStore.get("access_token")?.value;
-
     if (!token) return null;
 
     const secret = new TextEncoder().encode(process.env.SECRET_KEY);

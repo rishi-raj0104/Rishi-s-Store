@@ -7,6 +7,7 @@ import { SignJWT } from "jose";
 import OtpModel from "@/models/Otp.model";
 import { sendMail } from "@/lib/sendMail";
 import { otpEmail } from "@/email/otpEmail";
+import { emailVerificationLink } from "@/email/emailVerificationLink";
 export async function POST(request) {
   try {
     await connect();

@@ -7,14 +7,17 @@ import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { WEBSITE_HOME } from "@/routes/WebsiteRoute";
-import {use} from "react";
+import { use } from "react";
+import verifiedSImg from "@/assets/images/verified.gif";
+import verifiedImgFail from "@/assets/images/verification-failed.gif";
+
 const verifiedImg = {
-  src: "/assets/images/verified.gif",
+  src: verifiedSImg,
   height: 120,
 };
 
 const verificationFailedImg = {
-  src: "/assets/images/verification-failed.gif",
+  src: verifiedImgFail,
   height: 100,
 };
 
